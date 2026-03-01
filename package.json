@@ -1,0 +1,7 @@
+{
+  "name": "march-ego-root",
+  "private": true,
+  "scripts": {
+    "build": "cd coachOS && npm install && npm run build"
+  }
+}
