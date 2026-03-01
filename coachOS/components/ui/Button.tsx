@@ -1,12 +1,6 @@
-import { Pressable, Text, ActivityIndicator, Platform } from 'react-native';
-import * as Haptics from 'expo-haptics';
+import { Pressable, Text, ActivityIndicator, View } from 'react-native';
 import { cn } from '@/lib/cn';
-
-type LucideIcon = React.ComponentType<{
-  size: number;
-  color: string;
-  style?: { marginRight?: number; marginLeft?: number };
-}>;
+import type { LucideIcon } from 'lucide-react-native';
 
 interface ButtonProps {
   children: string;
@@ -19,31 +13,37 @@ interface ButtonProps {
   iconRight?: LucideIcon;
   fullWidth?: boolean;
   className?: string;
+  accessibilityLabel?: string;
 }
 
 const variantStyles = {
   primary: {
     container: 'bg-interactive-primary border border-interactive-primary',
+    containerPressed: 'bg-interactive-primary-hover',
     text: 'text-white',
     iconColor: '#FFFFFF',
   },
   secondary: {
     container: 'bg-white border border-border-default',
+    containerPressed: 'bg-bg-tertiary',
     text: 'text-text-primary',
     iconColor: '#0A0A0A',
   },
   ghost: {
     container: 'bg-transparent border border-transparent',
+    containerPressed: 'bg-bg-tertiary',
     text: 'text-text-primary',
     iconColor: '#0A0A0A',
   },
   danger: {
     container: 'bg-interactive-danger border border-interactive-danger',
+    containerPressed: 'bg-interactive-danger-hover',
     text: 'text-white',
     iconColor: '#FFFFFF',
   },
   link: {
     container: 'bg-transparent border border-transparent',
+    containerPressed: 'bg-transparent',
     text: 'text-text-primary underline',
     iconColor: '#0A0A0A',
   },
@@ -71,35 +71,26 @@ export function Button({
   const s = sizeStyles[size];
   const isDisabled = disabled || loading;
 
-  const handlePress = () => {
-    if (!isDisabled && Platform.OS !== 'web') {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    }
-    onPress?.();
-  };
-
   return (
     <Pressable
-      onPress={handlePress}
+      onPress={onPress}
       disabled={isDisabled}
-      accessibilityRole="button"
-      accessibilityLabel={typeof children === 'string' ? children : undefined}
       className={cn(
         'flex-row items-center justify-center',
         s.container,
         v.container,
         fullWidth && 'w-full',
         isDisabled && 'bg-interactive-disabled border-interactive-disabled opacity-60',
-        className
+        className,
       )}
-      style={({ pressed }) => [pressed && !isDisabled && { opacity: 0.9 }]}
+      style={({ pressed }) => [
+        pressed && !isDisabled && { opacity: 0.9 },
+      ]}
     >
       {loading ? (
         <ActivityIndicator
           size="small"
-          color={
-            variant === 'primary' || variant === 'danger' ? '#FFFFFF' : '#0A0A0A'
-          }
+          color={variant === 'primary' || variant === 'danger' ? '#FFFFFF' : '#0A0A0A'}
         />
       ) : (
         <>
@@ -115,7 +106,7 @@ export function Button({
               'font-inter-medium',
               s.text,
               v.text,
-              isDisabled && 'text-interactive-disabled-text'
+              isDisabled && 'text-interactive-disabled-text',
             )}
           >
             {children}

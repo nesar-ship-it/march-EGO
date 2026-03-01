@@ -1,0 +1,52 @@
+env: load .env
+env: export EXPO_PUBLIC_SUPABASE_URL EXPO_PUBLIC_SUPABASE_ANON_KEY EXPO_PUBLIC_APP_URL EXPO_PUBLIC_APP_NAME
+Starting Metro Bundler
+[metro-file-map] Cache write error
+: Error: EPERM: operation not permitted, open '/var/folders/jl/1rcn45bd3bnd0gg8twdgjqs00000gn/T/metro-file-map-7c88002acc876528e6fd4f20def62ebc-a911bd1a2f09ad2d9ab7168254c5c873'
+    at open (node:internal/fs/promises:636:25)
+    at Object.writeFile (node:internal/fs/promises:1239:14)
+    at /Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro-file-map@0.81.5/node_modules/metro-file-map/src/cache/DiskCacheManager.js:82:11
+    at DiskCacheManager.write (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro-file-map@0.81.5/node_modules/metro-file-map/src/cache/DiskCacheManager.js:108:7)
+    at FileMap._takeSnapshotAndPersist (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro-file-map@0.81.5/node_modules/metro-file-map/src/index.js:460:5)
+    at /Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro-file-map@0.81.5/node_modules/metro-file-map/src/index.js:256:9
+    at DependencyGraph.ready (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/node-haste/DependencyGraph.js:86:5) {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'open',
+  path: '/var/folders/jl/1rcn45bd3bnd0gg8twdgjqs00000gn/T/metro-file-map-7c88002acc876528e6fd4f20def62ebc-a911bd1a2f09ad2d9ab7168254c5c873'
+}
+Web Bundling failed 6525ms index.js (2672 modules)
+Error: Unable to resolve module ../../lib/cn from /Users/nesar/Documents/feb 2026/march-EGO/coachOS/components/navigation/Sidebar.tsx: 
+
+None of these files exist:
+  * lib/cn(.web.ts|.ts|.web.tsx|.tsx|.web.mjs|.mjs|.web.js|.js|.web.jsx|.jsx|.web.json|.json|.web.cjs|.cjs|.web.scss|.scss|.web.sass|.sass|.web.css|.css|.web.css|.css)
+  * lib/cn
+[0m [90m 2 |[39m [36mimport[39m { useRouter[33m,[39m usePathname } [36mfrom[39m [32m'expo-router'[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m { [33mHome[39m[33m,[39m [33mClipboardList[39m[33m,[39m [33mUsers[39m[33m,[39m [33mIndianRupee[39m[33m,[39m [33mMessageSquare[39m[33m,[39m [33mMoreHorizontal[39m } [36mfrom[39m [32m'lucide-react-native'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { cn } [36mfrom[39m [32m'@/lib/cn'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m navItems [33m=[39m [
+ [90m 7 |[39m   { path[33m:[39m [32m'/(staff)/(home)'[39m[33m,[39m label[33m:[39m [32m'Home'[39m[33m,[39m icon[33m:[39m [33mHome[39m }[33m,[39m[0m
+Error: Unable to resolve module ../../lib/cn from /Users/nesar/Documents/feb 2026/march-EGO/coachOS/components/navigation/Sidebar.tsx: 
+
+None of these files exist:
+  * lib/cn(.web.ts|.ts|.web.tsx|.tsx|.web.mjs|.mjs|.web.js|.js|.web.jsx|.jsx|.web.json|.json|.web.cjs|.cjs|.web.scss|.scss|.web.sass|.sass|.web.css|.css|.web.css|.css)
+  * lib/cn
+[0m [90m 2 |[39m [36mimport[39m { useRouter[33m,[39m usePathname } [36mfrom[39m [32m'expo-router'[39m[33m;[39m
+ [90m 3 |[39m [36mimport[39m { [33mHome[39m[33m,[39m [33mClipboardList[39m[33m,[39m [33mUsers[39m[33m,[39m [33mIndianRupee[39m[33m,[39m [33mMessageSquare[39m[33m,[39m [33mMoreHorizontal[39m } [36mfrom[39m [32m'lucide-react-native'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { cn } [36mfrom[39m [32m'@/lib/cn'[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m
+ [90m 6 |[39m [36mconst[39m navItems [33m=[39m [
+ [90m 7 |[39m   { path[33m:[39m [32m'/(staff)/(home)'[39m[33m,[39m label[33m:[39m [32m'Home'[39m[33m,[39m icon[33m:[39m [33mHome[39m }[33m,[39m[0m
+    at ModuleResolver.resolveDependency (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:114:15)
+    at DependencyGraph.resolveDependency (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/node-haste/DependencyGraph.js:248:43)
+    at /Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/lib/transformHelpers.js:165:21
+    at resolveDependencies (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/DeltaBundler/buildSubgraph.js:42:25)
+    at visit (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/DeltaBundler/buildSubgraph.js:83:30)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Promise.all (index 10)
+    at visit (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/DeltaBundler/buildSubgraph.js:92:5)
+    at async Promise.all (index 8)
+    at visit (/Users/nesar/Documents/feb 2026/march-EGO/coachOS/node_modules/.pnpm/metro@0.81.5/node_modules/metro/src/DeltaBundler/buildSubgraph.js:92:5)

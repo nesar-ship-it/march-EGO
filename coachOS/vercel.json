@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npx expo export -p web",
+  "outputDirectory": "dist",
+  "framework": "nextjs",
+  "installCommand": "pnpm install"
+}

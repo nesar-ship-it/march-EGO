@@ -32,7 +32,7 @@ export default function StaffLayout() {
   const { width } = useWindowDimensions();
   const isWeb = width >= 768;
 
-  const contentAreaStyle = Platform.OS === 'web' && isWeb ? { flex: 1, maxWidth: 1200, alignSelf: 'center' as const, width: '100%' } : { flex: 1 };
+  const contentAreaStyle = Platform.OS === 'web' && isWeb ? { flex: 1, maxWidth: 1200, alignSelf: 'center' as const, width: '100%' as const } : { flex: 1 };
 
   return (
     <ErrorBoundary>

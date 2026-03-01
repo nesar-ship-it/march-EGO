@@ -46,7 +46,7 @@ export default function AddStudentScreen() {
     });
     setLoading(false);
     if (error) {
-      showToast(error, 'error');
+      showToast(error.message, 'error');
       return;
     }
     if (result) {

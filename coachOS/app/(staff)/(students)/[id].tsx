@@ -450,14 +450,14 @@ export default function StudentDetailScreen() {
               const { error } = await createCoachNote({
                 org_id: orgId,
                 student_id: id,
-                coach_id: staffId,
                 note_type: noteType as 'diet' | 'practice' | 'improvement' | 'general',
-                title: noteTitle.trim() || null,
+                title: noteTitle.trim() || undefined,
                 body: noteBody.trim(),
+                created_by: staffId,
               });
               setNoteSubmitting(false);
               if (error) {
-                showToast(error, 'error');
+                showToast(error.message, 'error');
                 return;
               }
               showToast('Note added.', 'success');
