@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Expo
+.expo/
+dist/
+web-build/
+build/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Lockfiles - only keep package-lock.json for Vercel
+pnpm-lock.yaml
+yarn.lock
+
+# OS
+.DS_Store
+*.log
+
+# Build logs
+build.log
