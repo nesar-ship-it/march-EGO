@@ -2,6 +2,10 @@
   "name": "coach-os",
   "version": "1.0.0",
   "main": "index.js",
+  "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
