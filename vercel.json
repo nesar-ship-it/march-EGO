@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "cd coachOS && npm run build",
-  "installCommand": "cd coachOS && npm install",
+  "installCommand": "cd coachOS && pnpm install",
   "outputDirectory": "coachOS/dist",
   "rewrites": [
     {
